@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Islam Mohammad Shahidul | Ultra Premium Portfolio</title>
+<meta content="Ultra premium portfolio of Islam Mohammad Shahidul – Smart Security System Engineer specializing in CCTV, cloud intercom, access control, and network integration." name="description"/>
+<style>
+    :root {
+      --bg: #070b16;
+      --bg-2: #0b1328;
+      --panel: rgba(255,255,255,.055);
+      --panel-2: rgba(255,255,255,.03);
+      --text: #eef4ff;
+      --muted: #a8b7d8;
+      --line: rgba(255,255,255,.10);
+      --accent: #63b5ff;
+      --accent-2: #8e7cff;
+      --accent-3: #7cf0cf;
+      --gold: #ffd978;
+      --shadow: 0 24px 60px rgba(0,0,0,.35);
+      --radius: 22px;
+      --max: 1220px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(99,181,255,.14), transparent 24%),
+        radial-gradient(circle at top right, rgba(142,124,255,.10), transparent 22%),
+        linear-gradient(180deg, #050a14 0%, #091224 45%, #070b16 100%);
+      line-height: 1.65;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { opacity: .92; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      background: rgba(5,10,20,.75);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .menu a {
+      color: var(--muted);
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: .22s ease;
+    }
+
+    .menu a:hover {
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 78px 0 34px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(124,240,207,.08), transparent 20%),
+        radial-gradient(circle at 80% 0%, rgba(99,181,255,.10), transparent 22%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .93rem;
+      margin-bottom: 18px;
+    }
+
+    .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-3), var(--accent));
+      box-shadow: 0 0 18px rgba(124,240,207,.45);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      line-height: 1.02;
+      letter-spacing: -.04em;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #edf6ff, #8fc5ff 55%, #cabdff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: clamp(1.08rem, 1.8vw, 1.36rem);
+      color: #cdd9f6;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 68ch;
+      margin-bottom: 24px;
+      font-size: 1.04rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 15px;
+      font-weight: 800;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      transition: .22s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      color: #07111c;
+      background: linear-gradient(135deg, var(--accent), #c0dcff);
+      border: none;
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,.04);
+    }
+
+    .btn-gold {
+      color: #161009;
+      background: linear-gradient(135deg, var(--gold), #fff0ba);
+      border: none;
+    }
+
+    .hero-card, .card, .project, .timeline-item, .stat {
+      background: linear-gradient(180deg, var(--panel), var(--panel-2));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      border-radius: 28px;
+      padding: 24px;
+    }
+
+    .profile-wrap {
+      display: grid;
+      gap: 16px;
+    }
+
+    .profile-photo {
+      width: 100%;
+      aspect-ratio: 4 / 4.8;
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: #0b1324;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transform: scale(1.02);
+    }
+
+    .profile-note {
+      color: var(--muted);
+      text-align: center;
+      font-size: .94rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .stat {
+      border-radius: 20px;
+      padding: 18px;
+      text-align: center;
+      transition: transform .22s ease, border-color .22s ease;
+    }
+
+    .stat:hover {
+      transform: translateY(-4px);
+      border-color: rgba(99,181,255,.3);
+    }
+
+    .stat-number {
+      font-size: 1.6rem;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    section {
+      padding: 30px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 1.7rem;
+      letter-spacing: -.02em;
+    }
+
+    .section-text {
+      color: var(--muted);
+      margin: 0;
+      max-width: 74ch;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+    }
+
+    .card, .project {
+      border-radius: 24px;
+      padding: 22px;
+      transition: transform .22s ease, border-color .22s ease;
+    }
+
+    .card:hover, .project:hover {
+      transform: translateY(-4px);
+      border-color: rgba(99,181,255,.34);
+    }
+
+    .card h3, .project h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .card p, .project p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .pill-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: #deebff;
+      font-size: .95rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 18px;
+    }
+
+    .project-tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color: #d7e7ff;
+      font-size: .84rem;
+      font-weight: 700;
+    }
+
+    .project-header {
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+      margin-bottom:6px;
+    }
+
+    .status {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:.84rem;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:#dce9ff;
+    }
+
+    .status.completed::before,
+    .status.progress::before {
+      content:"";
+      width:8px; height:8px; border-radius:50%;
+      display:inline-block;
+    }
+
+    .status.completed::before { background: var(--accent-3); }
+    .status.progress::before { background: var(--gold); }
+
+    .gallery {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:16px;
+    }
+
+    .gallery figure {
+      margin:0;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:16px;
+      overflow:hidden;
+    }
+
+    .gallery img {
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+      transition:transform .25s ease;
+    }
+
+    .gallery figure:hover img {
+      transform:scale(1.04);
+    }
+
+    .gallery figcaption {
+      padding:10px 12px;
+      font-size:.88rem;
+      color:var(--muted);
+    }
+
+    .timeline {
+      display:grid;
+      gap:16px;
+    }
+
+    .timeline-item {
+      position:relative;
+      border-radius:22px;
+      padding:20px 20px 20px 24px;
+    }
+
+    .timeline-item::before {
+      content:"";
+      position:absolute;
+      left:0; top:20px; bottom:20px;
+      width:4px;
+      border-radius:999px;
+      background:linear-gradient(180deg, var(--accent), var(--accent-2));
+    }
+
+    .meta {
+      color:#cbd8f7;
+      font-size:.95rem;
+      margin-bottom:8px;
+      font-weight:700;
+    }
+
+    ul.clean {
+      margin:10px 0 0 18px;
+      padding:0;
+      color:var(--muted);
+    }
+
+    .docs {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:14px;
+    }
+
+    .doc {
+      flex:1 1 220px;
+      padding:14px;
+      border-radius:16px;
+      background:rgba(255,255,255,.035);
+      border:1px solid var(--line);
+    }
+
+    .doc h4 {
+      margin:0 0 6px;
+      font-size:1rem;
+    }
+
+    .contact-list {
+      display:grid;
+      gap:14px;
+    }
+
+    .contact-item {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      padding:14px 16px;
+      border-radius:16px;
+      background:rgba(255,255,255,.035);
+      border:1px solid var(--line);
+    }
+
+    .contact-label {
+      font-weight:800;
+    }
+
+    .contact-value {
+      color:var(--muted);
+      text-align:right;
+      word-break:break-word;
+    }
+
+    .editable {
+      outline:none;
+      border-bottom:1px dashed rgba(255,217,120,.45);
+    }
+
+    .editable:focus {
+      background:rgba(255,217,120,.06);
+      border-bottom-color:var(--gold);
+    }
+
+    footer {
+      padding:28px 0 48px;
+      text-align:center;
+      color:var(--muted);
+      font-size:.94rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid, .grid-2, .grid-3, .project-grid, .gallery {
+        grid-template-columns:1fr;
+      }
+      .menu { display:none; }
+      .stats { grid-template-columns:1fr 1fr; }
+      .hero { padding-top:44px; }
+      .gallery img { height:260px; }
+    }
+
+    @media (max-width: 560px) {
+      .stats { grid-template-columns:1fr; }
+      .section-head { display:block; }
+    }
+  </style>
+</head>
+<body>
+<nav class="nav">
+<div class="container nav-inner">
+<div class="brand">Islam Mohammad Shahidul</div>
+<div class="menu">
+<a href="#about">About</a>
+<a href="#capability">Capability</a>
+<a href="#projects">Projects</a>
+<a href="#documents">Documents</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+<header class="hero" id="top">
+<div class="container hero-grid">
+<div>
+<div class="badge"><span class="dot"></span> Ultra-premium engineering portfolio</div>
+<h1>Hello, I’m <span class="highlight editable" contenteditable="true">Islam Mohammad Shahidul</span></h1>
+<div class="subtitle editable" contenteditable="true">Smart Security System Engineer | Networking &amp; Cybersecurity Learner</div>
+<p class="lead editable" contenteditable="true">
+          I design, deploy, integrate, and hand over smart security infrastructure across condominium and building environments,
+          with hands-on capability in CCTV, cloud intercom, access control, relay and bypass logic, structured network switching,
+          4G backup design, and real-world site commissioning.
+        </p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#projects">Explore Projects</a>
+<a class="btn btn-secondary" href="cv.pdf" rel="noopener" target="_blank">Download CV</a>
+<a class="btn btn-gold" href="#documents">Open Documents</a>
+</div>
+<div class="stats">
+<div class="stat">
+<div class="stat-number editable" contenteditable="true">13+</div>
+<div class="stat-label">Years of Experience</div>
+</div>
+<div class="stat">
+<div class="stat-number editable" contenteditable="true">4</div>
+<div class="stat-label">Major Portfolio Projects</div>
+</div>
+<div class="stat">
+<div class="stat-number editable" contenteditable="true">Multi-Block</div>
+<div class="stat-label">System Scale</div>
+</div>
+<div class="stat">
+<div class="stat-number editable" contenteditable="true">CCTV + Intercom</div>
+<div class="stat-label">Core Specialization</div>
+</div>
+</div>
+</div>
+<div class="hero-card">
+<div class="profile-wrap">
+<div class="profile-photo">
+<img alt="Islam Mohammad Shahidul" src="profile_photo.jpg"/>
+</div>
+<div class="profile-note">
+            Real project portfolio built from site deployment images, handover plans, and current project documentation.
+          </div>
+</div>
+</div>
+</div>
+</header>
+<main class="container">
+<section id="about">
+<div class="section-head">
+<div>
+<h2 class="section-title">Professional Positioning</h2>
+<p class="section-text">This version presents you as a systems-focused engineer with real project proof, technical breadth, and documentation depth.</p>
+</div>
+</div>
+<div class="grid-2">
+<div class="card">
+<h3>Who I Am</h3>
+<p class="editable" contenteditable="true">
+            I specialize in smart building infrastructure including CCTV deployment, cloud-based intercom systems, access control, emergency release logic, structured network switching, and system handover. My work combines field execution, integration, documentation, and troubleshooting.
+          </p>
+</div>
+<div class="card">
+<h3>Why This Portfolio Is Different</h3>
+<p>
+            This is not only a resume. It demonstrates real engineering work with field images, network-based access systems, equipment placement plans, and handover documents across live residential projects.
+          </p>
+</div>
+</div>
+</section>
+<section id="capability">
+<div class="section-head">
+<div>
+<h2 class="section-title">Core Capability</h2>
+<p class="section-text">A rare combination of site engineering, device integration, and network-aware deployment.</p>
+</div>
+</div>
+<div class="grid-3">
+<div class="card">
+<h3>Security &amp; Access</h3>
+<div class="pill-wrap">
+<span class="pill">CCTV</span>
+<span class="pill">Access Control</span>
+<span class="pill">Face Recognition</span>
+<span class="pill">EM Lock</span>
+<span class="pill">Break Glass</span>
+<span class="pill">Bypass Switch</span>
+</div>
+</div>
+<div class="card">
+<h3>Cloud &amp; Intercom</h3>
+<div class="pill-wrap">
+<span class="pill">iCondo</span>
+<span class="pill">Cloud Intercom</span>
+<span class="pill">Mobile App Access</span>
+<span class="pill">Guard Portal</span>
+<span class="pill">Lobby Panels</span>
+<span class="pill">Resident Registration</span>
+</div>
+</div>
+<div class="card">
+<h3>Networking &amp; Handover</h3>
+<div class="pill-wrap">
+<span class="pill">MA-LAN Integration</span>
+<span class="pill">Network Switches</span>
+<span class="pill">4G Backup</span>
+<span class="pill">Structured Cabling</span>
+<span class="pill">Testing &amp; Commissioning</span>
+<span class="pill">Handover Docs</span>
+</div>
+</div>
+</div>
+</section>
+<section id="projects">
+<div class="section-head">
+<div>
+<h2 class="section-title">Featured Engineering Projects</h2>
+<p class="section-text">Project sections are structured like a premium systems portfolio: scope, role, result, proof, and documents.</p>
+</div>
+</div>
+<div class="project-grid">
+<div class="project">
+<div class="project-tag">CCTV Infrastructure</div>
+<div class="project-header">
+<h3>Parc Vera – CCTV System Deployment</h3>
+<span class="status completed">Documented</span>
+</div>
+<p>
+            Multi-location CCTV upgrade and placement planning covering basement, level 1, and perimeter/driveway visibility with mapped camera positions, coverage references, NVR grouping, and installation method notes.
+          </p>
+<ul class="clean">
+<li>IP address and NVR-based grouping design</li>
+<li>Coverage planning for driveway, ramps, and lobby-related zones</li>
+<li>Method statement for trunking, cabling reuse, and installation coordination</li>
+</ul>
+<div class="docs">
+<div class="doc">
+<h4>Project PDF</h4>
+<p>Layout, placement plan, camera list, and installation method.</p>
+<a class="btn btn-secondary" href="parc_vera_cctv.pdf" rel="noopener" target="_blank">Open CCTV Plan</a>
+</div>
+</div>
+</div>
+<div class="project">
+<div class="project-tag">Cloud Intercom</div>
+<div class="project-header">
+<h3>The Alps Residences – iCondo Access Deployment</h3>
+<span class="status completed">Planned &amp; Installed</span>
+</div>
+<p>
+            Cloud intercom and access device deployment including FR registration panels, side gates, lobby devices, basement panels, and facility zones with exposed trunking, powerpoint reuse, EM lock / door closer integration, and push-button / break glass planning.
+          </p>
+<ul class="clean">
+<li>Face recognition registration and mobile-app intercom workflow</li>
+<li>Side gate, lobby, basement, gym, tennis court, and function room coverage</li>
+<li>Integration of push button, break glass, EM lock, and door closer logic</li>
+</ul>
+<div class="docs">
+<div class="doc">
+<h4>Project PDF</h4>
+<p>Access device placement, installation notes, and facility layouts.</p>
+<a class="btn btn-secondary" href="alps_access_plan.pdf" rel="noopener" target="_blank">Open Access Plan</a>
+</div>
+</div>
+</div>
+<div class="project">
+<div class="project-tag">Completed Handover</div>
+<div class="project-header">
+<h3>Stratum – Cloud Intercom Handover</h3>
+<span class="status completed">Completed</span>
+</div>
+<p>
+            Completed multi-block handover with MA-LAN network switching, 4G backup router, device-to-switch allocation, bypass arrangements, and PM-issued emergency keys for lobby, perimeter, facility, and smart light related access infrastructure.
+          </p>
+<ul class="clean">
+<li>Installation completion date listed as 12 August 2025</li>
+<li>Network distribution across blocks 80 to 106</li>
+<li>Device abnormality bypass and emergency access readiness</li>
+</ul>
+<div class="docs">
+<div class="doc">
+<h4>Handover PDF</h4>
+<p>Completion matrix with internet, network device, location, and remarks.</p>
+<a class="btn btn-secondary" href="stratum_handover.pdf" rel="noopener" target="_blank">Open Handover</a>
+</div>
+</div>
+</div>
+<div class="project">
+<div class="project-tag">Current Project</div>
+<div class="project-header">
+<h3>Thomson Grand – Current Cloud Intercom Project</h3>
+<span class="status progress">In Progress</span>
+</div>
+<p>
+            Ongoing large-scale deployment with pending completion, involving lobby and service-lift switching, MA-LAN backbone, 4G backup, gym and tennis court facilities, perimeter access points, smart light support, and guard portal integration.
+          </p>
+<ul class="clean">
+<li>Multi-block switching across blocks 11 to 27</li>
+<li>Lobby, service lift, facility, and perimeter integration</li>
+<li>Ongoing live project suitable for “current work” portfolio positioning</li>
+</ul>
+<div class="docs">
+<div class="doc">
+<h4>Current Plan PDF</h4>
+<p>Project plan with switching, device coverage, and pending status.</p>
+<a class="btn btn-secondary" href="thomson_grand_plan.pdf" rel="noopener" target="_blank">Open Current Plan</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="section-head">
+<div>
+<h2 class="section-title">Real Site Gallery</h2>
+<p class="section-text">Selected images chosen for clarity, system variety, and recruiter impact.</p>
+</div>
+</div>
+<div class="gallery">
+<figure>
+<img alt="Cloud intercom entrance panel" src="scanqr_entry.jpg"/>
+<figcaption>Smart entrance panel deployment at live access point.</figcaption>
+</figure>
+<figure>
+<img alt="Lobby smart intercom entry" src="lobby_entry.jpg"/>
+<figcaption>Lobby entrance integration showing real front-end deployment.</figcaption>
+</figure>
+<figure>
+<img alt="Emergency release button" src="emergency_release.jpg"/>
+<figcaption>Access control support with emergency door release arrangement.</figcaption>
+</figure>
+<figure>
+<img alt="Control panel cabinet" src="intercom_panel_2.jpg"/>
+<figcaption>Multi-board control cabinet with network and device terminations.</figcaption>
+</figure>
+<figure>
+<img alt="Project equipment room" src="site_room.jpg"/>
+<figcaption>Equipment room environment showing installed field hardware.</figcaption>
+</figure>
+<figure>
+<img alt="Structured network box" src="network_box.jpg"/>
+<figcaption>Neat switching and power organization inside junction enclosure.</figcaption>
+</figure>
+</div>
+</section>
+<section>
+<div class="section-head">
+<div>
+<h2 class="section-title">Project Case Study – Smart Intercom &amp; Access Control</h2>
+<p class="section-text">A more premium presentation of your role and engineering value.</p>
+</div>
+</div>
+<div class="grid-2">
+<div class="card">
+<h3>My Role</h3>
+<ul class="clean">
+<li>Installation and termination of network and control components</li>
+<li>Panel mounting, trunking route planning, and site coordination</li>
+<li>Integration of FR, EM lock, break glass, push button, and door logic</li>
+<li>Testing, troubleshooting, and preparation for handover</li>
+</ul>
+</div>
+<div class="card">
+<h3>What This Demonstrates</h3>
+<ul class="clean">
+<li>Real execution of cloud-based building access systems</li>
+<li>Understanding of device dependencies and network architecture</li>
+<li>Ability to handle both technical detail and system-wide coordination</li>
+<li>Strong fit for senior technician, project engineer, and system integrator roles</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="documents">
+<div class="section-head">
+<div>
+<h2 class="section-title">Project Documents</h2>
+<p class="section-text">These supporting files strengthen the portfolio by adding formal drawings, plans, and handover evidence.</p>
+</div>
+</div>
+<div class="grid-2">
+<div class="card">
+<h3>Available PDFs</h3>
+<div class="docs">
+<div class="doc">
+<h4>Parc Vera CCTV</h4>
+<a class="btn btn-secondary" href="parc_vera_cctv.pdf" rel="noopener" target="_blank">Open PDF</a>
+</div>
+<div class="doc">
+<h4>The Alps Access Plan</h4>
+<a class="btn btn-secondary" href="alps_access_plan.pdf" rel="noopener" target="_blank">Open PDF</a>
+</div>
+<div class="doc">
+<h4>Stratum Handover</h4>
+<a class="btn btn-secondary" href="stratum_handover.pdf" rel="noopener" target="_blank">Open PDF</a>
+</div>
+<div class="doc">
+<h4>Thomson Grand</h4>
+<a class="btn btn-secondary" href="thomson_grand_plan.pdf" rel="noopener" target="_blank">Open PDF</a>
+</div>
+</div>
+</div>
+<div class="card">
+<h3>Editable Note for Future Updates</h3>
+<p class="editable" contenteditable="true">
+            You can edit this section to add future projects, more handover files, additional site images, client references, or live project status updates. This portfolio is designed to stay current as your experience grows.
+          </p>
+</div>
+</div>
+</section>
+<section id="contact">
+<div class="section-head">
+<div>
+<h2 class="section-title">Contact</h2>
+<p class="section-text">Ready for recruiters, employers, and project opportunities.</p>
+</div>
+</div>
+<div class="card">
+<div class="contact-list">
+<div class="contact-item">
+<div class="contact-label">Email</div>
+<div class="contact-value"><a href="mailto:Ucsuman478@gmail.com">Ucsuman478@gmail.com</a></div>
+</div>
+<div class="contact-item">
+<div class="contact-label">Phone</div>
+<div class="contact-value"><a href="tel:+6581102542">+65 8110 2542</a></div>
+</div>
+<div class="contact-item">
+<div class="contact-label">LinkedIn</div>
+<div class="contact-value">linkedin.com/in/shahidul478</div>
+</div>
+<div class="contact-item">
+<div class="contact-label">GitHub</div>
+<div class="contact-value">github.com/ucsuman478</div>
+</div>
+<div class="contact-item">
+<div class="contact-label">Location</div>
+<div class="contact-value">Singapore</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+    © <span id="year"></span> Islam Mohammad Shahidul. Ultra Premium Portfolio.
+  </footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
